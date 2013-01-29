@@ -9,7 +9,7 @@ thanks for scturtle and his vim-instant-markdown-py project
 
 ##Installation
 * `pip install markdown` and `pip install pygments`
-* put `md_instant.vim` and the folder `md_instant` in `~/.vim/plugin`
+* put `md_instant.vim` and the folder `md_instant` in `~/.vim/plugin` or use pathogen
 
 ##Run
 when you edit markdown file, the browser will automatically open, if not please browse the <http://localhost:7000/>
