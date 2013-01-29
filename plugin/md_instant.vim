@@ -4,11 +4,13 @@ if !has('python')
     finish
 endif
 
+let s:scriptfolder = expand('<sfile>:p:h').'/md_instant'
+
 function! OpenMarkdown()
     let b:md_tick = ""
 python << EOF
 import sys, os, vim, time
-sys.path.append(os.path.expanduser('~/.vim/plugin/md_instant'))
+sys.path.append(vim.eval('s:scriptfolder'))
 sys.stdout = open(os.path.devnull, 'w')
 sys.stderr = open(os.path.devnull, 'w')
 import md_instant

@@ -1,4 +1,5 @@
 #python-vim-instant-markdown
+fork from isnowfy, updated code and folder structure to support pathogen
 
 thanks for scturtle and his vim-instant-markdown-py project
 
