@@ -29,7 +29,7 @@ def sendall(data):
 
 def startbrowser():
     url = 'http://localhost:7000/'
-    if sys.platform.startswith('darwith'):
+    if sys.platform.startswith('darwin'):
         os.system('open -g '+url)
     elif sys.platform.startswith('win'):
         os.system('start '+url)
