@@ -166,10 +166,12 @@
 
         conn.onmessage = function (event) {
           var html = JSON.parse(event.data);
-          var i,s='';
-          for(i=0;i<20;i++) s+='<br/>';
-          document.body.innerHTML = html+s;
+          var i, s = '';
+          for(i = 0; i < 20; i++) s += '<br />';
+          var bottom = '<div id="bottom"></div>'
+          document.body.innerHTML = html+s+bottom;
           MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+          document.getElementById('bottom').scrollIntoView();
         };
 
         conn.onclose = function (event) {
