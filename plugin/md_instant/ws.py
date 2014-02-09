@@ -75,11 +75,11 @@ def main(handle=process):
     try:
         server.bind(('', port))
         server.listen(100)
-    except Exception, e:
-        print e
+    except Exception as e:
+        print(e)
         exit()
     socket_list.add(server)
-    print 'server start on port %d' % port
+    print('server start on port %d' % port)
     while True:
         r, w, e = select(socket_list, [], [])
         for sock in r:
