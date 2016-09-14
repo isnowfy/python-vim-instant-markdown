@@ -16,6 +16,7 @@ sys.stdout = open(os.path.devnull, 'w')
 sys.stderr = open(os.path.devnull, 'w')
 vim.command(':autocmd!')
 vim.command('autocmd CursorMovedI * call UpdateMarkdown()')
+vim.command('autocmd CursorMoved * call UpdateMarkdown()')
 vim.command('autocmd VimLeave * call CloseMarkdown()')
 import md_instant
 md_instant.main()
